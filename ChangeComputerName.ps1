@@ -27,10 +27,12 @@ If($newComputerName = $currentComputerName){
 Else{
 # Set new computer name
 Rename-Computer -NewName $newComputerName -Force
-}
+
 # Force the computer to restart in a certain time period.
 shutdown.exe -s -t 2400
+}
 New-Item -Path "C:\ChangeComputerNameSuccessful.txt"
+
 
 #Declare title
 $title = "Computer Name / Domain Name" # Declare title
