@@ -27,9 +27,6 @@ If($newComputerName = $currentComputerName){
 Else{
 # Set new computer name
 Rename-Computer -NewName $newComputerName -Force
-}
-New-Item -Path "C:\ChangeComputerNameSuccessful.txt"
-
 
 #Declare title
 $title = "Computer Name / Domain Name" # Declare title
@@ -40,3 +37,8 @@ $message = "The name of this computer has been updated."
 # Display the notification
 Add-Type -AssemblyName PresentationFramework
 [void] [System.Windows.MessageBox]::Show($message, $title,0,64)
+}
+
+
+
+
